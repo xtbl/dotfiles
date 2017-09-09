@@ -1,0 +1,106 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+// Toggle between terminal and editor focus
+    {
+        "key": "alt+q",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "alt+q",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    // move between terminals
+    {
+        "key": "alt+right",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "workbench.action.terminal.focusPrevious"
+    },
+    {
+        "key": "alt+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "alt+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+    // ctrl + alt stuff for editor history menu
+    // take a look at Working without tabs
+    // https://code.visualstudio.com/docs/getstarted/userinterface#_working-without-tabs
+    //setting workbench.editor.showTabs to false.
+    {
+        "key": "alt+tab",
+        "command": "workbench.action.openPreviousEditorFromHistory"
+    },
+    {
+        "key": "alt+tab",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    // {
+    //     "key": "c",
+    //     "command": "workbench.action.quickOpenNavigatePrevious",
+    //     "when": "inQuickOpen"
+    // },
+    // list focus like the file view list
+    // include movement up and down with j,k
+    {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "listFocus"
+    },
+    {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "listFocus"
+    },
+    {
+        "key": "enter",
+        "command": "list.select",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+        "key": "o",
+        "command": "list.toggleExpand",
+        "when": "listFocus"
+    },
+    // when the suggestion dropdown is open this can be used to map (perhaps shift+j or k) to the up and down selection
+    // https://github.com/VSCodeVim/Vim/issues/754
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "shift+j",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "shift+k",
+        "command": "workbench.action.quickOpenNavigatePrevious",
+        "when": "inQuickOpen"
+    },
+    // looks like is not working, perhaps due to vim custom undo/redo
+    // {
+    //     "key": "shift+u",
+    //     "command": "redo",
+    //     "when": "editorTextFocus"
+    // }
+
+    // custom task goes here, build works with cmd+shift+b and displays output
+    // {
+    //     "key": "ctrl+h",
+    //     "command": "workbench.action.tasks.runTask",
+    //     "args": "build"
+    // }
+]

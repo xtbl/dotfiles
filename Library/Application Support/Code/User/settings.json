@@ -1,0 +1,112 @@
+// Place your settings in this file to overwrite the default settings
+{
+    // general stuff
+    // Controls the font size in pixels. 
+    "editor.fontSize": 15,
+    "workbench.editor.showTabs": false,
+    // Controls the font family.
+    "editor.fontFamily": "'Source Code Pro for Powerline', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontWeight": "200",
+    "terminal.integrated.fontSize": 13,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    // vim mappings
+    "vim.useSystemClipboard": true,
+    "vim.leader": "<space>",
+    // Enable the EasyMotion plugin for Vim.
+    "vim.easymotion": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [ "j", "k" ],
+            "after": [ "<Esc>" ]
+        }
+    ],
+    // escape
+    "vim.otherModesKeyBindings": [
+        {
+            "before": [ "leader", "e" ],
+            "after": [ "<Esc>" ]
+        }
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        // visual selection inside word: space,w
+        {
+            "before": [ "leader", "w" ],
+            "after": [ "v", "i", "w" ]
+        },
+        // copy word: space,y
+        {
+            "before": [ "leader", "y" ],
+            "after": [ "y", "i", "w" ]
+        },
+        // paste last yanked item: space,p
+        {
+            "before": [ "leader", "p" ],
+            "after": [ "\"", "0", "p" ]
+        },
+        // format selection: w,f
+    // comment toggle
+    {
+        "before": [ "leader", "c" ],
+        "after": [],
+        "commands": [
+            {
+                "command": "editor.action.commentLine",
+                "args": []
+            }
+        ]
+    },
+    {
+        "before": [ "leader", "f" ],
+        "after": [],
+        "commands": [
+            {
+                "command": "editor.action.formatSelection",
+                "args": []
+            }
+        ]
+    },
+    // save file: leader, s
+    {
+        "before": [ "leader", "s" ],
+        "after": [],
+        "commands": [
+            {
+                "command": "workbench.action.files.save",
+                "args": []
+            }
+        ]
+    },
+    // quick open file browser: leader, o
+    {
+        "before": [ "leader", "o" ],
+        "after": [],
+        "commands": [
+            {
+                "command": "workbench.action.quickOpen",
+                "args": []
+            }
+        ]
+    },
+    // open editor history selector: leader, k
+    {
+        "before": [ "leader", "k" ],
+        "after": [],
+        "commands": [
+            {
+                "command": "workbench.action.openPreviousEditorFromHistory",
+                "args": []
+            }
+        ]
+    }
+],
+"workbench.colorTheme": "Fresh Material",
+"workbench.activityBar.visible": true,
+"workbench.colorCustomizations": {
+    "editor.selectionBackground": "#990099"
+},
+"window.zoomLevel": 0,
+"vim.disableAnnoyingNeovimMessage": true,
+"typescript.check.tscVersion": false,
+"vim.disableAnnoyingGcMessage": true
+}
